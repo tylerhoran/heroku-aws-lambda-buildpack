@@ -24,7 +24,11 @@ Here is how the whole thing works:
 ### Set the buildpack
 
 ```
-$ heroku buildpacks:set https://github.com/kubek2k/heroku-aws-lambda-buildpack
+$ heroku buildpacks:add heroku-community/awscli
+$ heroku buildpacks:add heroku/python
+$ heroku buildpacks:add heroku/nodejs
+$ heroku buildpacks:add https://github.com/kubek2k/heroku-aws-lambda-buildpack
+
 ```
 
 ### Set env variables
@@ -54,7 +58,7 @@ $ git push heroku master
 $ heroku run deploy
 ```
 
-## Examples 
+## Examples
 
 ### Sample java lambda
 
